@@ -1,0 +1,105 @@
+.cart__body-total-coupons {
+  .modal {
+    height: unset;
+    width: unset;
+    width: 96vw;
+    padding: 2rem;
+
+    @include responsive(sm-screen) {
+      width: 90vw;
+    }
+
+    @include responsive(md-screen) {
+      width: 80vw;
+    }
+
+    @include responsive(lg-screen) {
+      width: 50vw;
+    }
+
+    @include responsive(xl-screen) {
+      width: 40vw;
+    }
+  }
+}
+
+.promotion__modal {
+  &-header {
+    display: flex;
+    &-heading {
+      @include style-text(500, 1.8rem, 2.8rem, $text-color);
+    }
+
+    &-search {
+      @include input;
+      font-weight: 500;
+    }
+
+    & button {
+      margin-left: 1rem;
+    }
+  }
+
+  &-body {
+    margin-top: 2rem;
+    flex: 1;
+    overflow-y: auto;
+    max-height: 70vh;
+    @include hide-scrollbar;
+    @include responsive(lg-screen) {
+      max-height: 60vh;
+    }
+
+    &-loading {
+      height: 100px;
+      @include responsive(md-screen) {
+        height: 200px;
+      }
+      @include flex-center;
+
+      & svg {
+        font-size: 3rem;
+        fill: $text-color;
+      }
+    }
+
+    &-empty {
+      padding-block: 3rem;
+      @include flex-center;
+      flex-direction: column;
+
+      &-text {
+        text-align: center;
+        margin-top: 2rem;
+        @include style-text(500, 1.4rem, 1.4rem, $danger);
+      }
+    }
+
+    & .promotion__modal-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      list-style: none;
+    }
+  }
+
+  &-footer {
+    margin-top: 2rem;
+    @include flex(flex-end, center);
+
+    & .btn-secondary {
+      background-color: $secondary;
+    }
+
+    & button {
+      padding: 0.8rem 1.6rem;
+    }
+  }
+}
+
+.promotion__item {
+  &-image {
+    @include style-text(600, 1.4rem, 2.4rem, $white);
+    position: relative;
+  }
+}

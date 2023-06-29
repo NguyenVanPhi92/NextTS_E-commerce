@@ -1,0 +1,21 @@
+.custom-select {
+  &__control {
+    box-shadow: none !important;
+    border-radius: 1px;
+  }
+
+  &__input-container {
+    padding: 0px !important;
+    margin: 0px !important;
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+  }
+
+  &__indicator-separator {
+    display: none;
+  }
+
+  &__value-container {
+    height: 40px;
+  }
+}

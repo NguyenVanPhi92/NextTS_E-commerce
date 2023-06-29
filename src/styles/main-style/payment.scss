@@ -1,0 +1,42 @@
+.payment__order {
+  &-heading {
+    margin-bottom: 3rem;
+    @include style-text(500, 1.8rem, 2.8rem, $text-color);
+  }
+
+  &__list {
+    grid-gap: 10px;
+    list-style: none;
+
+    &-item {
+      @include flex(space-between, center);
+      cursor: pointer;
+      margin-bottom: 8px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &-content {
+        flex: 1;
+        margin-left: 8px;
+        display: flex;
+        align-items: center;
+
+        & p {
+          @include style-text(500, 1.3rem, 2rem, $text-color);
+        }
+
+        & img {
+          width: 40px;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  &-disabled {
+    opacity: 0.5;
+    user-select: none;
+  }
+}
